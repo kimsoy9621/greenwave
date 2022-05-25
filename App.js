@@ -12,16 +12,14 @@ import {
   Image
 } from "react-native";
 
-
-
 const Stack = createNativeStackNavigator();
 
 function App() {
- 
   return (
-  
   <NavigationContainer>
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator initialRouteName="Home" screenOptions={{
+    headerShown: false
+  }}>
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="SignUp" component={SignUp} />
@@ -30,4 +28,3 @@ function App() {
 }
 
 export default App;
-
